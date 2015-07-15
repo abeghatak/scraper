@@ -17,10 +17,11 @@ tds=root.cssselect('td')
 #for td in tds:
 #	print "HTML tag+text", lxml.html.tostring(td)
 #	print "HTML text", td.text
+indexno=0
 for td in tds:
-	record={"td":td.text}
-	print record
-	scraperwiki.sqlite.save(["td"], record)	
+	indexno=indexno+1
+	record={"td":td.text, "index: indexno}
+	scraperwiki.sqlite.save(["index"], record)	
 #root.cssselect("div[align='left']")
 #
 # # Write out to the sqlite database using scraperwiki library
