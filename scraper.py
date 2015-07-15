@@ -10,9 +10,14 @@ html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sit
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
 tds=root.cssselect('td') 
+#for td in tds:
+#	print lxml.html.tostring(td)
+#	print td.text
+
 for td in tds:
-	print lxml.html.tostring(td)
-	print td.text
+	print "HTML tag+text", lxml.html.tostring(td)
+	print "HTML text", td.text
+	
 #root.cssselect("div[align='left']")
 #
 # # Write out to the sqlite database using scraperwiki library
