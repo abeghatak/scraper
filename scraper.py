@@ -20,7 +20,7 @@ tds=root.cssselect('td')
 indexno=0
 for td in tds:
 	indexno=indexno+1
-	record={"td":td.text, "index: indexno}
+	record={"td":td.text, "index:indexno}
 	scraperwiki.sqlite.save(["index"], record)	
 #root.cssselect("div[align='left']")
 #
